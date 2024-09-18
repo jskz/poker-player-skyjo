@@ -37,4 +37,22 @@ describe('Pocket', () => {
 
     expect(result).toBe(false);
   });
+
+  it('should return isGoodPair value of true with a good pair', () => {
+    const state = {
+      players: [
+        {
+          hole_cards: [
+            { rank: 'A', suit: 'hearts' },
+            { rank: 'A', suit: 'spades' },
+          ],
+        },
+      ],
+      in_action: 0,
+    };
+    const pocket = new Pocket(state as GameState);
+    const result = pocket.isGoodPair();
+
+    expect(result).toBe(true);
+  });
 });

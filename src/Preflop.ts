@@ -15,6 +15,10 @@ class Preflop {
     }
 
     bet(): number {
+      if (this.pocket.isGoodPair()) {
+        return 10000;
+      }
+
       if (this.pocket.isPair()) {
         return this.state.minimum_raise * 3;
       }

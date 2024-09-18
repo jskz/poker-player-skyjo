@@ -2,6 +2,12 @@ import { Card } from "./interfaces/Card";
 import { GameState } from "./interfaces/GameState";
 
 class Pocket {
+  isGoodPair() {
+    return this.firstCard.rank === 'A' && this.secondCard.rank === 'A'
+      || this.firstCard.rank === 'K' && this.secondCard.rank === 'K'
+      || this.firstCard.rank === 'Q' && this.secondCard.rank === 'Q';
+  }
+
   public firstCard: Card;
   public secondCard: Card;
 

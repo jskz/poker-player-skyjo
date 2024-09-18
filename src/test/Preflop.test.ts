@@ -46,8 +46,8 @@ describe('Preflop', () => {
       players: [
         {
           hole_cards: [
-            { rank: 'A', suit: 'hearts' },
-            { rank: 'A', suit: 'spades' },
+            { rank: '7', suit: 'hearts' },
+            { rank: '7', suit: 'spades' },
           ],
         },
       ],

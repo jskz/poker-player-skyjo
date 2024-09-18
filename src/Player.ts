@@ -3,7 +3,7 @@ import Pocket from "./Pocket";
 import Postflop from "./Postflop";
 import Preflop from "./Preflop";
 
-export const VERSION = "testy postflop :D";
+export const VERSION = "GOOD!";
 
 export class Player {
   public betRequest(gameState: GameState, betCallback: (bet: number) => void): void {
