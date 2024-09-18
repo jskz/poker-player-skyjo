@@ -2,8 +2,10 @@ export const VERSION = "log requests";
 
 export class Player {
   public betRequest(gameState: any, betCallback: (bet: number) => void): void {
+    const minimumRaise = gameState.minimum_raise;
     console.log(gameState);
-    betCallback(0);
+    console.log(`Minimum raise: ${minimumRaise}`);
+    betCallback(minimumRaise);
   }
 
   public showdown(gameState: any): void {
