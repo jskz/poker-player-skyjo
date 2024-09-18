@@ -1,0 +1,63 @@
+{
+  "tournament_id": "66eab3c4fd273a00027d91df",
+  "game_id": "66eafc430101350002fbfdf2",
+  "round": 16,
+  "players": [
+    {
+      "name": "Skyjo",
+      "stack": 1021,
+      "status": "active",
+      "bet": 6,
+      "hole_cards": [
+        {
+          "rank": "A",
+          "suit": "diamonds"
+        },
+        {
+          "rank": "9",
+          "suit": "hearts"
+        }
+      ],
+      "time_used": 253356,
+      "version": "more logging",
+      "id": 0
+    },
+    {
+      "name": "Purring Cat",
+      "stack": 972,
+      "status": "folded",
+      "bet": 0,
+      "time_used": 262737,
+      "version": "v.1.1",
+      "id": 1
+    },
+    {
+      "name": "Bets for TDD",
+      "stack": 1000,
+      "status": "folded",
+      "bet": 0,
+      "time_used": 210088,
+      "version": "Default Java folding player",
+      "id": 2
+    },
+    {
+      "name": "Bluff and Burndown",
+      "stack": 998,
+      "status": "folded",
+      "bet": 3,
+      "time_used": 218117,
+      "version": "Default TypeScript folding player",
+      "id": 3
+    }
+  ],
+  "small_blind": 3,
+  "big_blind": 6,
+  "orbits": 4,
+  "dealer": 2,
+  "community_cards": [],
+  "current_buy_in": 6,
+  "pot": 9,
+  "in_action": 0,
+  "minimum_raise": 3,
+  "bet_index": 5
+}
