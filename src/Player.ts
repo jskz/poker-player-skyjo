@@ -3,13 +3,11 @@ import Pocket from "./Pocket";
 import Postflop from "./Postflop";
 import Preflop from "./Preflop";
 
-export const VERSION = "smarter preflop";
+export const VERSION = "logging tweak";
 
 export class Player {
   public betRequest(gameState: GameState, betCallback: (bet: number) => void): void {
     const minimumRaise = gameState.minimum_raise;
-
-    const pocket = new Pocket(gameState);
 
     if (!gameState.community_cards.length) {
       const preflop = new Preflop(gameState);
