@@ -1,6 +1,6 @@
 import { GameState } from "./interfaces/GameState";
 
-export const VERSION = "game state typing";
+export const VERSION = "more logging";
 
 export class Player {
   public betRequest(gameState: GameState, betCallback: (bet: number) => void): void {

@@ -11,7 +11,11 @@ app.get('/', ({}, res) => res.status(200).send('OK'));
 
 app.post('/', (req, res) => {
     if (req.body.action === 'bet_request') {
-        player.betRequest(JSON.parse(req.body.game_state), bet => res.status(200).send(bet.toString()));
+        player.betRequest(JSON.parse(req.body.game_state), (bet) => {
+            const betString = bet.toString();
+            console.log('Action: ', betString);
+            res.status(200).send(betString);
+        });
     } else if (req.body.action === 'showdown') {
         player.showdown(JSON.parse(req.body.game_state));
         res.status(200).send('OK');
