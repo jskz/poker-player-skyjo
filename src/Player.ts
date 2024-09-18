@@ -1,7 +1,8 @@
-export const VERSION = "Default TypeScript folding player";
+export const VERSION = "log requests";
 
 export class Player {
   public betRequest(gameState: any, betCallback: (bet: number) => void): void {
+    console.log(gameState);
     betCallback(0);
   }
 
