@@ -6,7 +6,8 @@ export class Player {
   public betRequest(gameState: GameState, betCallback: (bet: number) => void): void {
     const minimumRaise = gameState.minimum_raise;
     console.log(JSON.stringify(gameState));
-    console.log(`Minimum raise: ${minimumRaise}`);
+    console.log('community cards: ', gameState.community_cards);
+
     betCallback(minimumRaise);
   }
 
