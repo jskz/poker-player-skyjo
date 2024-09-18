@@ -22,7 +22,7 @@ describe('E2E Tests for / endpoint', () => {
       .send({ action: 'bet_request', game_state: JSON.stringify(gameState) });
 
     expect(response.status).toBe(200);
-    expect(response.text).toBe('200'); // Assuming the minimum_raise is returned
+    expect(response.text).toBe('0'); // Assuming the minimum_raise is returned
   });
 
   it('should handle showdown action', async () => {

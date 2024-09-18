@@ -1,54 +1,76 @@
 module.exports = {
   "tournament_id": "66eab3c4fd273a00027d91df",
-  "game_id": "66eae7800101350002fbfd7e",
-  "round": 127,
+  "game_id": "66eafc430101350002fbfdf2",
+  "round": 21,
   "players": [
     {
       "name": "Skyjo",
-      "stack": 909,
+      "stack": 1031,
       "status": "active",
-      "bet": 0,
-      "hole_cards": [],
-      "time_used": 1618321,
-      "version": "log requests",
+      "bet": 10,
+      "hole_cards": [
+        {
+          "rank": "9",
+          "suit": "diamonds"
+        },
+        {
+          "rank": "J",
+          "suit": "spades"
+        }
+      ],
+      "time_used": 340508,
+      "version": "more logging",
       "id": 0
     },
     {
       "name": "Purring Cat",
-      "stack": 1000,
+      "stack": 953,
       "status": "active",
-      "bet": 200,
-      "time_used": 2606401,
-      "version": "Default Java folding player",
+      "bet": 10,
+      "time_used": 341098,
+      "version": "v.1.1",
       "id": 1
     },
     {
       "name": "Bets for TDD",
-      "stack": 491,
-      "status": "active",
-      "bet": 400,
-      "time_used": 1608794,
+      "stack": 1000,
+      "status": "folded",
+      "bet": 0,
+      "time_used": 275472,
       "version": "Default Java folding player",
       "id": 2
     },
     {
       "name": "Bluff and Burndown",
-      "stack": 1000,
+      "stack": 996,
       "status": "folded",
       "bet": 0,
-      "time_used": 1575566,
+      "time_used": 279460,
       "version": "Default TypeScript folding player",
       "id": 3
     }
   ],
-  "small_blind": 200,
-  "big_blind": 400,
-  "orbits": 31,
-  "dealer": 0,
-  "community_cards": [],
-  "current_buy_in": 400,
-  "pot": 600,
+  "small_blind": 5,
+  "big_blind": 10,
+  "orbits": 5,
+  "dealer": 3,
+  "community_cards": [
+    {
+      "rank": "4",
+      "suit": "diamonds"
+    },
+    {
+      "rank": "7",
+      "suit": "hearts"
+    },
+    {
+      "rank": "2",
+      "suit": "clubs"
+    }
+  ],
+  "current_buy_in": 10,
+  "pot": 20,
   "in_action": 0,
-  "minimum_raise": 200,
-  "bet_index": 3
+  "minimum_raise": 10,
+  "bet_index": 0
 };
