@@ -5,6 +5,13 @@ class Pocket {
   public firstCard: Card;
   public secondCard: Card;
 
+  hasAceOrKing(): boolean {
+    return this.firstCard.rank === 'A'
+      || this.firstCard.rank === 'K'
+      || this.secondCard.rank === 'A'
+      || this.secondCard.rank === 'K';
+  }
+
   constructor(state: GameState) {
     const player = state.players?.[state.in_action];
     const holeCards = player?.hole_cards;

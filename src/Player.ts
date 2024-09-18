@@ -1,22 +1,22 @@
 import { GameState } from "./interfaces/GameState";
 import Pocket from "./Pocket";
+import Preflop from "./Preflop";
 
-export const VERSION = "smarter early play";
+export const VERSION = "smarter preflop";
 
 export class Player {
   public betRequest(gameState: GameState, betCallback: (bet: number) => void): void {
     const minimumRaise = gameState.minimum_raise;
-    console.log(JSON.stringify(gameState));
-    console.log('community cards: ', gameState.community_cards);
 
     const pocket = new Pocket(gameState);
-    if (!gameState.community_cards.length && pocket.isPair()) {
-      betCallback(minimumRaise * 3);
+
+    if (!gameState.community_cards.length) {
+      const preflop = new Preflop(gameState);
+      betCallback(preflop.bet());
       return;
     }
 
     if (gameState.community_cards.length === 3) {
-      // if we have a pair (use Pocket class), then we raise
       if (pocket.isPair()) {
         betCallback(minimumRaise * 2);
         return;
