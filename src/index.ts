@@ -24,5 +24,8 @@ app.post('/', (req, res) => {
 
 const port = parseInt(process.env['PORT'] || '1337');
 const host = "0.0.0.0";
-app.listen(port, host);
+
+export default app.listen(port, host);
 console.log('Listening at http://' + host + ':' + port);
+
+// export default app;

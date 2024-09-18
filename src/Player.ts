@@ -1,9 +1,9 @@
-export const VERSION = "log requests";
+export const VERSION = "better logging";
 
 export class Player {
   public betRequest(gameState: any, betCallback: (bet: number) => void): void {
     const minimumRaise = gameState.minimum_raise;
-    console.log(gameState);
+    console.log(JSON.stringify(gameState));
     console.log(`Minimum raise: ${minimumRaise}`);
     betCallback(minimumRaise);
   }
