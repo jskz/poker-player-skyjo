@@ -18,6 +18,7 @@ app.post('/', (req, res) => {
         });
     } else if (req.body.action === 'showdown') {
         player.showdown(JSON.parse(req.body.game_state));
+        console.log('Showdown: ', JSON.stringify(req.body.game_state));
         res.status(200).send('OK');
     } else if (req.body.action === 'version') {
         res.status(200).send(VERSION);
