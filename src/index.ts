@@ -13,7 +13,7 @@ app.post('/', (req, res) => {
     if (req.body.action === 'bet_request') {
         player.betRequest(JSON.parse(req.body.game_state), (bet) => {
             const betString = bet.toString();
-            console.log('Action: ', betString);
+            console.log('Action: ', betString, JSON.stringify(req.body.game_state));
             res.status(200).send(betString);
         });
     } else if (req.body.action === 'showdown') {

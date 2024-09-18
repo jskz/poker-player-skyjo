@@ -1,5 +1,6 @@
 import { GameState } from "./interfaces/GameState";
 import Pocket from "./Pocket";
+import Postflop from "./Postflop";
 import Preflop from "./Preflop";
 
 export const VERSION = "smarter preflop";
@@ -17,13 +18,9 @@ export class Player {
     }
 
     if (gameState.community_cards.length === 3) {
-      if (pocket.isPair()) {
-        betCallback(minimumRaise * 2);
-        return;
-      } else {
-        betCallback(0);
-        return;
-      }
+      const postflop = new Postflop(gameState);
+      betCallback(postflop.bet());
+      return;
     }
 
     betCallback(minimumRaise);
