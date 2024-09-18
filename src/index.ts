@@ -1,11 +1,8 @@
 import express from 'express';
-import { Player } from './Player';
-
-const VERSION = "Default TypeScript folding player";
+import { Player, VERSION } from './Player';
 
 const app = express();
 const player = new Player();
-
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
