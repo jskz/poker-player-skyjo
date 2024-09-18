@@ -3,7 +3,7 @@ import Pocket from "./Pocket";
 import Postflop from "./Postflop";
 import Preflop from "./Preflop";
 
-export const VERSION = "logging tweak";
+export const VERSION = "actually postflop :D";
 
 export class Player {
   public betRequest(gameState: GameState, betCallback: (bet: number) => void): void {
@@ -15,7 +15,7 @@ export class Player {
       return;
     }
 
-    if (gameState.community_cards.length === 3) {
+    if (gameState.community_cards.length >= 3) {
       const postflop = new Postflop(gameState);
       betCallback(postflop.bet());
       return;
