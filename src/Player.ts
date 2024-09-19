@@ -3,16 +3,17 @@ import { GameState } from "./interfaces/GameState";
 import Postflop from "./Postflop";
 import Preflop from "./Preflop";
 
-export const VERSION = "NO QUARTER!";
+export const VERSION = "CAREFUL! TWICE NO QUARTER!";
 
 export class Player {
   public betRequest(gameState: GameState, betCallback: (bet: number) => void): void {
     const game = new Game(gameState);
-    const minimumRaise = gameState.minimum_raise;
 
     if (game.isPreflop()) {
       const preflop = new Preflop(gameState);
-      betCallback(preflop.bet());
+
+      let result = preflop.bet();
+      betCallback(result);
       return;
     }
 

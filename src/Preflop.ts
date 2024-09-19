@@ -14,6 +14,10 @@ class Preflop {
       this.state = state;
     }
 
+    betLargerThanQuarterOfMoney(): boolean {
+      return this.state.minimum_raise > this.state.players[this.state.in_action].stack / 4;
+    }
+
     bet(): number {
       if (this.pocket.isGoodPair()) {
         return 10000;
@@ -24,7 +28,11 @@ class Preflop {
       }
 
       if (this.pocket.hasAceOrKing()) {
-        return this.state.minimum_raise;
+        if (this.betLargerThanQuarterOfMoney()) {
+          return 0;
+        }
+
+        return this.state.current_buy_in - this.state.players[this.state.in_action].bet;
       }
 
       return 0;

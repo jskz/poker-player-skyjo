@@ -1,4 +1,5 @@
 import { GameState } from "./interfaces/GameState";
+import Position from "./interfaces/Position";
 
 class Game {
   state: GameState;
